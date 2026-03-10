@@ -1,7 +1,6 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 require 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,18 +18,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'mail.keysmadenyc.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'zipcodelocksites@gmail.com';
-        $mail->Password   = 'hpuv qtgc rsyn gzcn';
+        $mail->Username   = 'info@keysmadenyc.com';
+        $mail->Password   = 'gP5de5*82';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
-        $mail->setFrom('zipcodelocksites@gmail.com', 'Keys Made NYC');
+        $mail->setFrom('info@keysmadenyc.com', 'Keys Made NYC');
         $mail->addAddress('zipcodelocksites@gmail.com');
         $mail->addReplyTo($email, $name);
 
-        $mail->Subject = 'New Contact Form Submission - Keys Made NYC';
+        $mail->Subject = 'New Form Submission from KeysMadeNYC.com';
         $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\n\nMessage:\n$message";
 
         $mail->send();
