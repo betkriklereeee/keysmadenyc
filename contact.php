@@ -24,6 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password   = 'gP5de5*82';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
+        $mail->SMTPOptions = [
+            'ssl' => [
+                'verify_peer'       => false,
+                'verify_peer_name'  => false,
+                'allow_self_signed' => true,
+            ]
+        ];
 
         $mail->setFrom('info@keysmadenyc.com', 'Keys Made NYC');
         $mail->addAddress('zipcodelocksites@gmail.com');
