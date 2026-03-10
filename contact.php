@@ -18,21 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host       = 'mail.keysmadenyc.com';
+        $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@keysmadenyc.com';
-        $mail->Password   = 'gP5de5*82';
+        $mail->Username   = 'zipcodelocksites@gmail.com';
+        $mail->Password   = 'hpuv qtgc rsyn gzcn';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
-        $mail->SMTPOptions = [
-            'ssl' => [
-                'verify_peer'       => false,
-                'verify_peer_name'  => false,
-                'allow_self_signed' => true,
-            ]
-        ];
 
-        $mail->setFrom('info@keysmadenyc.com', 'Keys Made NYC');
+        $mail->setFrom('zipcodelocksites@gmail.com', 'Keys Made NYC');
         $mail->addAddress('zipcodelocksites@gmail.com');
         $mail->addReplyTo($email, $name);
 
