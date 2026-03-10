@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 587;
 
         $mail->setFrom('zipcodelocksites@gmail.com', 'Keys Made NYC');
-        $mail->addAddress('keysmadenyc@gmail.com');
+        $mail->addAddress('zipcodelocksites@gmail.com');
         $mail->addReplyTo($email, $name);
 
         $mail->Subject = 'New Contact Form Submission - Keys Made NYC';
