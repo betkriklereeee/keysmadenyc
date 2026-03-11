@@ -9,18 +9,15 @@
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Keys Made NYC"/>
 <link rel="canonical" href="https://keysmadenyc.com"/>
-<!-- Open Graph -->
 <meta property="og:title" content="Keys Made NYC | Locksmith Directory NYC"/>
 <meta property="og:description" content="Find trusted, licensed locksmiths near you in NYC. Key cutting, emergency lockouts, lock rekeying, car keys & more across all 5 boroughs."/>
 <meta property="og:url" content="https://keysmadenyc.com"/>
 <meta property="og:type" content="website"/>
 <meta property="og:image" content="https://keysmadenyc.com/images/Logo2.png"/>
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Keys Made NYC | Locksmith Directory NYC"/>
 <meta name="twitter:description" content="Find trusted, licensed locksmiths near you in NYC. Key cutting, emergency lockouts, lock rekeying & more."/>
 <meta name="twitter:image" content="https://keysmadenyc.com/images/Logo2.png"/>
-<!-- Schema Markup -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,18 +29,18 @@
   "image": "https://keysmadenyc.com/images/Logo2.png",
   "telephone": "+12123924818",
   "email": "info@keysmadenyc.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "New York",
-    "addressRegion": "NY",
-    "addressCountry": "US"
-  },
-  "areaServed": [
-    "Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"
-  ],
-  "openingHours": "Mo-Su 00:00-23:59",
-  "sameAs": []
+  "address": {"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"},
+  "areaServed": ["Manhattan","Brooklyn","Queens","The Bronx","Staten Island"],
+  "openingHours": "Mo-Su 00:00-23:59"
 }
+</script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1FQDT8HNGY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1FQDT8HNGY');
 </script>
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -52,19 +49,27 @@
   .logo{color:#c9a84c;font-size:1.5rem;font-weight:bold;letter-spacing:1px;}
   .nav-links a{color:#fff;text-decoration:none;margin-left:24px;font-size:.9rem;letter-spacing:.5px;transition:color .2s;}
   .nav-links a:hover{color:#c9a84c;}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+  .hamburger span{display:block;width:25px;height:2px;background:#c9a84c;}
+  @media(max-width:768px){
+    nav{padding:16px 20px;}
+    .hamburger{display:flex;}
+    .nav-links{display:none;flex-direction:column;position:absolute;top:62px;left:0;right:0;background:#1a1a2e;padding:16px 20px;z-index:99;border-top:2px solid #c9a84c;}
+    .nav-links.open{display:flex;}
+    .nav-links a{margin-left:0;padding:12px 0;border-bottom:1px solid #2d2d5e;font-size:1rem;}
+    .nav-links a:last-child{border-bottom:none;}
+  }
   .hero{background:linear-gradient(135deg,#1a1a2e 60%,#2d2d5e);color:#fff;padding:80px 40px 60px;text-align:center;}
   .hero h1{font-size:3rem;color:#c9a84c;margin-bottom:16px;letter-spacing:2px;}
   .hero p{font-size:1.2rem;max-width:560px;margin:0 auto 32px;color:#ddd;line-height:1.7;}
   .btn{background:#c9a84c;color:#1a1a2e;padding:14px 36px;border:none;font-size:1rem;font-weight:bold;cursor:pointer;letter-spacing:1px;text-decoration:none;display:inline-block;transition:background .2s;}
   .btn:hover{background:#e0bf6a;}
-  /* SEARCH */
   .search-section{background:#f0ece0;padding:40px 20px;text-align:center;border-bottom:3px solid #c9a84c;}
   .search-section h2{font-size:1.5rem;color:#1a1a2e;margin-bottom:8px;}
   .search-section p{color:#555;margin-bottom:20px;font-size:.95rem;}
   .search-bar{display:flex;justify-content:center;max-width:480px;margin:0 auto;}
   .search-bar input{flex:1;padding:14px 18px;font-size:1rem;border:2px solid #c9a84c;border-right:none;font-family:inherit;outline:none;}
   .search-bar button{background:#1a1a2e;color:#c9a84c;border:2px solid #1a1a2e;padding:14px 24px;font-size:1rem;font-weight:bold;cursor:pointer;}
-  /* RESULTS */
   .results-section{max-width:800px;margin:0 auto;padding:40px 20px;}
   .results-title{font-size:1.1rem;color:#555;margin-bottom:20px;}
   .results-title span{color:#1a1a2e;font-weight:bold;}
@@ -76,7 +81,6 @@
   .listing-info a{color:#c9a84c;font-size:.9rem;text-decoration:none;}
   .listing-badge{background:#1a1a2e;color:#c9a84c;font-size:.75rem;padding:4px 10px;letter-spacing:1px;white-space:nowrap;}
   .no-results{text-align:center;color:#888;padding:40px 0;}
-  /* SERVICES */
   .services-section{padding:80px 40px;max-width:1100px;margin:0 auto;}
   h2.sh{font-size:2rem;color:#1a1a2e;margin-bottom:12px;letter-spacing:1px;}
   .section-line{width:60px;height:3px;background:#c9a84c;margin-bottom:40px;}
@@ -86,24 +90,20 @@
   .service-icon{font-size:2.2rem;margin-bottom:14px;}
   .service-card h3{color:#1a1a2e;margin-bottom:8px;font-size:1.1rem;}
   .service-card p{color:#555;font-size:.9rem;line-height:1.6;}
-  /* BRANDS */
   .brands-section{background:#f7f5f0;padding:60px 40px;text-align:center;border-top:1px solid #e0ddd5;}
-  .brands-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;max-width:900px;margin:0 auto;}
+  .brands-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:24px;max-width:900px;margin:0 auto;}
   .brand-item{display:flex;flex-direction:column;align-items:center;gap:12px;}
   .brand-img{width:120px;height:90px;overflow:hidden;border:1px solid #ddd;background:#fff;}
   .brand-img img{width:100%;height:100%;object-fit:cover;display:block;}
   .brand-item span{font-weight:bold;color:#1a1a2e;font-size:.95rem;}
-  /* GALLERY */
   .gallery-section{background:#f7f5f0;padding:80px 40px;}
   .gallery-inner{max-width:1100px;margin:0 auto;}
   .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
   .gallery-item{background:#ddd;height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#888;font-size:.85rem;border:1px solid #ccc;}
   .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;}
-  /* LOCATION */
   .location-card{border-left:4px solid #c9a84c;padding:20px 24px;background:#f9f9f9;}
   .location-card h3{color:#1a1a2e;margin-bottom:6px;}
   .location-card p{color:#555;font-size:.9rem;line-height:1.7;}
-  /* FAQ */
   .faq-section{background:#f7f5f0;padding:80px 40px;}
   .faq-inner{max-width:800px;margin:0 auto;}
   .faq-item{border-bottom:1px solid #ddd;}
@@ -111,7 +111,6 @@
   .faq-btn:hover{color:#c9a84c;}
   .faq-icon{font-size:1.4rem;color:#c9a84c;font-weight:bold;flex-shrink:0;transition:transform .3s;}
   .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;color:#555;line-height:1.8;font-size:.95rem;}
-  /* CONTACT */
   .contact-section{background:#1a1a2e;color:#fff;padding:80px 40px;}
   .contact-inner{max-width:700px;margin:0 auto;text-align:center;}
   .contact-section h2{color:#c9a84c;}
@@ -123,21 +122,15 @@
   footer{background:#111;color:#888;text-align:center;padding:24px;font-size:.85rem;}
   footer span{color:#c9a84c;}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1FQDT8HNGY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1FQDT8HNGY');
-</script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
+<nav style="position:relative;">
   <div class="logo">🗝 Keys Made NYC</div>
-  <div class="nav-links">
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
     <a href="#about">About Us</a>
     <a href="#directory">Directory</a>
     <a href="#services">Services</a>
@@ -148,14 +141,12 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Keys Made NYC</h1>
   <p>New York City's trusted key cutting & locksmith service. Fast, reliable, and professional — wherever you are in the five boroughs.</p>
   <a href="#contact" class="btn">Get In Touch</a>
 </div>
 
-<!-- SEARCH DIRECTORY -->
 <div class="search-section" id="directory">
   <h2>Find a Locksmith Near You</h2>
   <p>Enter your zip code to find trusted locksmiths in your area.</p>
@@ -165,13 +156,11 @@
   </div>
 </div>
 
-<!-- RESULTS -->
 <div class="results-section" id="resultsSection" style="display:none;">
   <p class="results-title" id="resultsTitle"></p>
   <div id="listingsContainer"></div>
 </div>
 
-<!-- ABOUT -->
 <div id="about" style="background:#1a1a2e;padding:80px 40px;">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;">
@@ -190,7 +179,6 @@
   </div>
 </div>
 
-<!-- SERVICES -->
 <section class="services-section" id="services">
   <h2 class="sh">Our Services</h2>
   <div class="section-line"></div>
@@ -204,52 +192,34 @@
   </div>
 </section>
 
-<!-- BRANDS -->
 <div class="brands-section">
   <h2 class="sh">Featured Brands</h2>
   <div class="section-line" style="margin:0 auto 12px;"></div>
   <p style="color:#555;margin-bottom:40px;font-size:.95rem;">Top-quality brands known for durability, innovation, and trusted performance.</p>
   <div class="brands-grid">
-    <div class="brand-item">
-      <div class="brand-img"><img src="https://keysmadenyc.com/images/Mul%20T%20Lock%20Keys.jpg" alt="Mul-T-Lock"/></div>
-      <span>Mul-T-Lock</span>
-    </div>
-    <div class="brand-item">
-      <div class="brand-img"><img src="https://keysmadenyc.com/images/Medico-set-copy-scaled.webp" alt="Medeco"/></div>
-      <span>Medeco</span>
-    </div>
-    <div class="brand-item">
-      <div class="brand-img"><img src="https://keysmadenyc.com/images/IMG_6233.jpeg" alt="Schlage"/></div>
-      <span>Schlage</span>
-    </div>
-    <div class="brand-item">
-      <div class="brand-img"><img src="https://keysmadenyc.com/images/Baldwin%20Key%20set.png" alt="Baldwin"/></div>
-      <span>Baldwin</span>
-    </div>
-    <div class="brand-item">
-      <div class="brand-img"><img src="https://keysmadenyc.com/images/248%20Lock%20keys.jpeg" alt="248 Lock"/></div>
-      <span>248 Lock</span>
-    </div>
+    <div class="brand-item"><div class="brand-img"><img src="https://keysmadenyc.com/images/Mul%20T%20Lock%20Keys.jpg" alt="Mul-T-Lock"/></div><span>Mul-T-Lock</span></div>
+    <div class="brand-item"><div class="brand-img"><img src="https://keysmadenyc.com/images/Medico-set-copy-scaled.webp" alt="Medeco"/></div><span>Medeco</span></div>
+    <div class="brand-item"><div class="brand-img"><img src="https://keysmadenyc.com/images/IMG_6233.jpeg" alt="Schlage"/></div><span>Schlage</span></div>
+    <div class="brand-item"><div class="brand-img"><img src="https://keysmadenyc.com/images/Baldwin%20Key%20set.png" alt="Baldwin"/></div><span>Baldwin</span></div>
+    <div class="brand-item"><div class="brand-img"><img src="https://keysmadenyc.com/images/248%20Lock%20keys.jpeg" alt="248 Lock"/></div><span>248 Lock</span></div>
   </div>
 </div>
 
-<!-- GALLERY -->
 <div class="gallery-section" id="gallery">
   <div class="gallery-inner">
     <h2 class="sh">Keys & Locks We've Worked On</h2>
     <div class="section-line"></div>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://keysmadenyc.com/images/Key%20cutting.jpeg" alt="Key Cutting"/></div>
-      <div class="gallery-item"><img src="https://keysmadenyc.com/images/DoorOnGround.jpeg" alt="Door"/></div>
+      <div class="gallery-item"><img src="https://keysmadenyc.com/images/BronzeHandle.jpeg" alt="Bronze Handle"/></div>
+      <div class="gallery-item"><img src="https://keysmadenyc.com/images/DoorLatch.jpeg" alt="Door Latch"/></div>
       <div class="gallery-item"><img src="https://keysmadenyc.com/images/RedDoor.jpeg" alt="Red Door"/></div>
       <div class="gallery-item"><img src="https://keysmadenyc.com/images/SystemReqiring.jpeg" alt="System"/></div>
       <div class="gallery-item"><img src="https://keysmadenyc.com/images/TopAuto.jpeg" alt="Auto"/></div>
-      <div class="gallery-item"><img src="https://keysmadenyc.com/images/DoorBuzzer.jpeg" alt="Door Buzzer"/></div>
+      <div class="gallery-item"><img src="https://keysmadenyc.com/images/KeyWall.jpeg" alt="Key Wall"/></div>
     </div>
   </div>
 </div>
 
-<!-- LOCATIONS -->
 <section style="padding:80px 40px;max-width:1100px;margin:0 auto;" id="locations">
   <h2 class="sh">Featured Locations</h2>
   <div class="section-line"></div>
@@ -269,43 +239,29 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <div class="faq-section" id="faq">
   <div class="faq-inner">
     <h2 class="sh">Frequently Asked Questions</h2>
     <div class="section-line"></div>
     <div class="faq-item">
-      <button class="faq-btn" onclick="toggleFaq(this)">
-        <span>🔑 What services does Keys Made NYC offer?</span>
-        <span class="faq-icon">+</span>
-      </button>
+      <button class="faq-btn" onclick="toggleFaq(this)"><span>🔑 What services does Keys Made NYC offer?</span><span class="faq-icon">+</span></button>
       <div class="faq-answer">Keys Made NYC connects you with trusted locksmiths who offer a wide range of services including key cutting, lockout assistance, lock rekeying, lock installation, car key programming, and high-security lock systems. Our directory features specialists working with top brands like Mul-T-Lock, Medeco, Schlage, Baldwin, and 248 Lock.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn" onclick="toggleFaq(this)">
-        <span>📅 How can I schedule a service?</span>
-        <span class="faq-icon">+</span>
-      </button>
+      <button class="faq-btn" onclick="toggleFaq(this)"><span>📅 How can I schedule a service?</span><span class="faq-icon">+</span></button>
       <div class="faq-answer">Simply call us or fill out our contact form and we'll arrange the locksmith service you need in a convenient fashion — no hassle, no stress. We'll match you with the right professional for your specific situation.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn" onclick="toggleFaq(this)">
-        <span>✅ Are the locksmiths in your directory licensed and insured?</span>
-        <span class="faq-icon">+</span>
-      </button>
+      <button class="faq-btn" onclick="toggleFaq(this)"><span>✅ Are the locksmiths in your directory licensed and insured?</span><span class="faq-icon">+</span></button>
       <div class="faq-answer">Yes. Every locksmith featured in our directory is licensed and insured, so you can have peace of mind knowing you're in good hands.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn" onclick="toggleFaq(this)">
-        <span>🗽 Do you serve all NYC boroughs?</span>
-        <span class="faq-icon">+</span>
-      </button>
+      <button class="faq-btn" onclick="toggleFaq(this)"><span>🗽 Do you serve all NYC boroughs?</span><span class="faq-icon">+</span></button>
       <div class="faq-answer">Yes! Keys Made NYC serves all five boroughs — Manhattan, Brooklyn, Queens, The Bronx, and Staten Island. Use our zip code search above to find a locksmith near you.</div>
     </div>
   </div>
 </div>
 
-<!-- CONTACT -->
 <div class="contact-section" id="contact">
   <div class="contact-inner">
     <h2>Contact Us</h2>
@@ -328,7 +284,20 @@
 </footer>
 
 <script>
-const listings = [
+// Hamburger menu
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('#navLinks a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// Listings data
+var listings = [
   { zip:"10028", name:"Safety Locksmith & Hardware Store", phone:"(917) 338-1950", website:"https://www.safetylockhardware.com", featured:true },
   { zip:"10021", name:"Locksmith 10021", phone:"(212) 392-4818", website:"https://www.locksmith10021.com" },
   { zip:"10022", name:"Locksmith 10022", phone:"(212) 392-4818", website:"https://www.locksmith10022.com" },
@@ -379,14 +348,14 @@ function searchZip() {
   }).join('');
 }
 
-document.getElementById('zipInput').addEventListener('keydown',function(e){
-  if(e.key==='Enter')searchZip();
+document.getElementById('zipInput').addEventListener('keydown', function(e) {
+  if(e.key==='Enter') searchZip();
 });
 
-function toggleFaq(btn){
-  var answer=btn.nextElementSibling;
-  var icon=btn.querySelector('.faq-icon');
-  var isOpen=answer.style.maxHeight&&answer.style.maxHeight!=='0px';
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var icon = btn.querySelector('.faq-icon');
+  var isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
   document.querySelectorAll('.faq-answer').forEach(function(a){a.style.maxHeight='0px';a.style.paddingBottom='0';});
   document.querySelectorAll('.faq-icon').forEach(function(i){i.style.transform='rotate(0deg)';});
   if(!isOpen){
@@ -396,45 +365,43 @@ function toggleFaq(btn){
   }
 }
 
-document.addEventListener('DOMContentLoaded',function(){
-  document.getElementById('submitBtn').addEventListener('click',function(){
-    var name=document.getElementById('fname').value.trim();
-    var email=document.getElementById('femail').value.trim();
-    var phone=document.getElementById('fphone').value.trim();
-    var message=document.getElementById('fmessage').value.trim();
-    var status=document.getElementById('formStatus');
-    if(!name||!email||!message){
-      status.style.color='#ff6b6b';
-      status.textContent='Please fill out your name, email, and message.';
-      return;
-    }
-    var data=new FormData();
-    data.append('name',name);
-    data.append('email',email);
-    data.append('phone',phone);
-    data.append('message',message);
-    status.style.color='#c9a84c';
-    status.textContent='Sending...';
-    fetch('contact.php',{method:'POST',body:data})
-      .then(function(r){return r.text();})
-      .then(function(response){
-        if(response==='success'){
-          status.style.color='#4caf50';
-          status.textContent='✅ Message sent! We\'ll be in touch soon.';
-          document.getElementById('fname').value='';
-          document.getElementById('femail').value='';
-          document.getElementById('fphone').value='';
-          document.getElementById('fmessage').value='';
-        } else {
-          status.style.color='#ff6b6b';
-          status.textContent=response;
-        }
-      })
-      .catch(function(){
+document.getElementById('submitBtn').addEventListener('click', function() {
+  var name = document.getElementById('fname').value.trim();
+  var email = document.getElementById('femail').value.trim();
+  var phone = document.getElementById('fphone').value.trim();
+  var message = document.getElementById('fmessage').value.trim();
+  var status = document.getElementById('formStatus');
+  if(!name||!email||!message){
+    status.style.color='#ff6b6b';
+    status.textContent='Please fill out your name, email, and message.';
+    return;
+  }
+  var data = new FormData();
+  data.append('name',name);
+  data.append('email',email);
+  data.append('phone',phone);
+  data.append('message',message);
+  status.style.color='#c9a84c';
+  status.textContent='Sending...';
+  fetch('contact.php',{method:'POST',body:data})
+    .then(function(r){return r.text();})
+    .then(function(response){
+      if(response==='success'){
+        status.style.color='#4caf50';
+        status.textContent='✅ Message sent! We\'ll be in touch soon.';
+        document.getElementById('fname').value='';
+        document.getElementById('femail').value='';
+        document.getElementById('fphone').value='';
+        document.getElementById('fmessage').value='';
+      } else {
         status.style.color='#ff6b6b';
-        status.textContent='Something went wrong. Please try again.';
-      });
-  });
+        status.textContent=response;
+      }
+    })
+    .catch(function(){
+      status.style.color='#ff6b6b';
+      status.textContent='Something went wrong. Please try again.';
+    });
 });
 </script>
 </body>
